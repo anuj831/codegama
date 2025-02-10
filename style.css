@@ -1,0 +1,307 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b0c10;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            width: 100%;
+            background: #0b0c10;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo img {
+            max-height: 50px;
+        }
+
+        /* Navigation Menu */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Section */
+        main {
+            margin-top: 5rem;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        main h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        main p {
+            font-size: 1.2rem;
+            color: #c5c6c7;
+            margin-bottom: 2rem;
+        }
+
+        /* Button Styles */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .button {
+      
+            color: #0b0c10;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .button:hover {
+            background-color: #45a29e;
+        }
+
+        /* Dashboard Image Styling */
+        .dashboard-image {
+            max-width: 90%;
+            height: auto;
+            margin-top: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Feature Section */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+          
+            border-radius: 10px;
+            padding: 1rem;
+            width: 150px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            box-shadow: none;
+        }
+
+        .feature-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item span {
+            font-weight: bold;
+            color: #c5c6c7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            main h1 {
+                font-size: 2rem;
+            }
+
+            .button-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .features {
+                flex-direction: column;
+            }
+
+            .feature-item {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                max-height: 40px;
+            }
+
+            .button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+       /* Usage Section Styling */
+     /* Usage Section Styling */
+.usage-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    border-radius: 12px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.left-content {
+    max-width: 50%;
+    color: white;
+}
+
+.left-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.left-content p {
+    color: #c5c6c7;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.feature-points {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-points li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.right-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Responsive Design for Usage Section */
+@media (max-width: 768px) {
+    .usage-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .right-image {
+        order: -1; /* Move image above text on smaller screens */
+        margin-bottom: 2rem;
+    }
+
+    .left-content h2 {
+        font-size: 2rem;
+    }
+
+    .left-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .left-content p {
+        font-size: 0.9rem;
+    }
+
+    .icon-wrapper {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+
+/* Go to Watchlist Button Styles */
+.watchlist-button {
+    background-color: #0b0e11; /* Dark background color, adjust to match the image */
+    color: white; /* Text color (teal or light blue), adjust to match the image */
+    padding: 0.8rem 3.5rem; /* Adjust padding to match the image */
+    border-radius: 13px; /* Rounded corners */
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.8rem; /* Adjust font size */
+
+    margin-top: 1.5rem; /* Adjust margin as needed */
+}
+
+
+.icon-wrapper img {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
